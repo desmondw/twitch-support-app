@@ -1,0 +1,164 @@
+/* line 5, style.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: "Source Sans Pro", sans-serif;
+  -webkit-transition: all 0.2s;
+          transition: all 0.2s;
+}
+
+/* line 13, style.scss */
+.sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  background-color: #353535;
+}
+
+/* line 22, style.scss */
+.main-container {
+  width: calc(100% - 100px);
+  height: 100%;
+  margin-left: 100px;
+}
+/* line 27, style.scss */
+.main-container .row {
+  margin: 0;
+}
+/* line 31, style.scss */
+.main-container .record-list {
+  height: 385px;
+  min-width: 1050px;
+  padding: 0;
+  background-color: #F0F0F0;
+  color: #fdfdfd;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  outline: 1px solid #E0E0E0;
+}
+/* line 41, style.scss */
+.main-container .record-list .record {
+  height: 55px;
+  width: 100%;
+  position: relative;
+  box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+}
+/* line 48, style.scss */
+.main-container .record-list .record:hover {
+  z-index: 1000 !important;
+  height: 65px;
+  font-size: 110%;
+  box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+}
+/* line 56, style.scss */
+.main-container .record-list .record .record-info-container {
+  height: 100%;
+}
+/* line 59, style.scss */
+.main-container .record-list .record .record-info-container .record-info {
+  position: absolute;
+  bottom: 8;
+  left: 10;
+}
+/* line 64, style.scss */
+.main-container .record-list .record .record-info-container .record-info .record-type {
+  font-size: 135%;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+/* line 70, style.scss */
+.main-container .record-list .record .record-info-container .record-info .record-time {
+  font-size: 100%;
+  line-height: 1em;
+  color: #dbdbdb;
+}
+/* line 78, style.scss */
+.main-container .record-list .record .record-name-container {
+  height: 100%;
+  padding-left: 25px;
+}
+/* line 82, style.scss */
+.main-container .record-list .record .record-name-container .record-name {
+  font-size: 300%;
+  line-height: 1em;
+  position: absolute;
+  bottom: 5;
+  text-overflow: ellipsis;
+}
+/* line 91, style.scss */
+.main-container .record-list .record .record-amount-container {
+  height: 100%;
+}
+/* line 94, style.scss */
+.main-container .record-list .record .record-amount-container .record-amount {
+  position: absolute;
+  bottom: 5;
+  right: 10;
+}
+/* line 99, style.scss */
+.main-container .record-list .record .record-amount-container .record-amount .record-pay-amount {
+  text-align: right;
+  padding-right: 5px;
+  font-size: 300%;
+  line-height: 1em;
+}
+/* line 106, style.scss */
+.main-container .record-list .record .record-amount-container .record-amount .record-est-pay-amount {
+  font-size: 180%;
+  line-height: 1em;
+  color: #dbdbdb;
+  min-width: 100px;
+  display: inline-block;
+}
+/* line 117, style.scss */
+.main-container .record-list .record-type-follow {
+  background-color: #4672bc;
+}
+/* line 118, style.scss */
+.main-container .record-list .record-type-refollow {
+  background-color: #456497;
+}
+/* line 119, style.scss */
+.main-container .record-list .record-type-sub {
+  background-color: #4eaf3e;
+}
+/* line 120, style.scss */
+.main-container .record-list .record-type-resub {
+  background-color: #459b37;
+}
+/* line 121, style.scss */
+.main-container .record-list .record-type-donation {
+  background-color: #e59e2d;
+}
+/* line 124, style.scss */
+.main-container .record-list::-webkit-scrollbar {
+  width: 1em;
+}
+/* line 128, style.scss */
+.main-container .record-list::-webkit-scrollbar-track {
+  background-color: #EEEEEE;
+}
+/* line 133, style.scss */
+.main-container .record-list::-webkit-scrollbar-thumb {
+  background-color: #C5C5C5;
+}
+/* line 137, style.scss */
+.main-container .record-list::-webkit-scrollbar-thumb:hover {
+  background-color: #B4B4B4;
+}
+
+/* line 143, style.scss */
+.hide-true {
+  display: none;
+}
+
+/* line 147, style.scss */
+.hide-false {
+  display: auto;
+}

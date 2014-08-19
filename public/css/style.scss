@@ -1,0 +1,149 @@
+$font-source: 'Source Sans Pro', sans-serif;
+$color-primary-bright: #FDFDFD;
+$color-secondary-bright: #DBDBDB;
+
+html,body {
+	height:100%;
+	width:100%;
+	font-family: $font-source;
+
+	transition: all 0.2s;
+}
+
+.sidebar {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	width:100px;
+	background-color: #353535;
+}
+
+.main-container {
+	width: calc(100% - 100px);
+	height: 100%;
+	margin-left: 100px;
+
+	.row {
+		margin: 0;
+	}
+
+	.record-list {
+		height: 385px;
+		min-width: 1050px;
+		padding: 0;
+		background-color: #F0F0F0;
+		color: $color-primary-bright;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		outline: 1px solid #E0E0E0;
+
+		.record {
+			height: 55px;
+			width: 100%;
+			position: relative; //for z-index on box shadow effect
+			box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.20);
+			transition: all 0.3s;
+
+			&:hover {
+				z-index: 1000 !important;
+				height: 65px;
+				font-size: 110%;
+				box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.4);
+				transition: all 0.3s;
+			}
+
+			.record-info-container {
+				height: 100%;
+
+				.record-info {
+					position: absolute;
+					bottom: 8;
+					left: 10;
+
+					.record-type {
+						font-size: 135%;
+						line-height: 1em;
+						text-transform: uppercase;
+					}
+
+					.record-time {
+						font-size: 100%;
+						line-height: 1em;
+						color: $color-secondary-bright;
+					}
+				}
+			}
+
+			.record-name-container {
+				height:100%;
+				padding-left: 25px;
+
+				.record-name {
+					font-size: 300%;
+					line-height: 1em;
+					position: absolute;
+					bottom: 5;
+					text-overflow: ellipsis
+				}
+			}
+
+			.record-amount-container {
+				height: 100%;
+
+				.record-amount {
+					position: absolute;
+					bottom: 5;
+					right: 10;
+					
+					.record-pay-amount {
+						text-align: right;
+						padding-right: 5px;
+						font-size: 300%;
+						line-height: 1em;
+					}
+
+					.record-est-pay-amount {
+						font-size: 180%;
+						line-height: 1em;
+						color: $color-secondary-bright;
+						min-width: 100px;
+						display: inline-block;
+					}
+				}
+			}
+		}
+
+		.record-type-follow 	{ background-color: #4672BC }
+		.record-type-refollow 	{ background-color: #456497 }
+		.record-type-sub 		{ background-color: #4EAF3E }
+		.record-type-resub 		{ background-color: #459B37 }
+		.record-type-donation 	{ background-color: #E59E2D }
+	}
+
+	.record-list::-webkit-scrollbar {
+    	width: 1em;
+	}
+	 
+	.record-list::-webkit-scrollbar-track {
+	    // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	    background-color: #EEEEEE;
+	}
+	 
+	.record-list::-webkit-scrollbar-thumb {
+	  background-color: #C5C5C5;
+	  // outline: 1px solid slategrey;
+
+	  &:hover {
+	  	background-color: #B4B4B4;
+	  }
+	}
+}
+
+.hide-true {
+	display: none;
+}
+
+.hide-false {
+	display: auto;
+}
